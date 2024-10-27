@@ -1,0 +1,21 @@
+// Classe Inventário para armazenamento de itens
+class Inventario {
+    private ArrayList<Item> itens;
+
+    public Inventario() {
+        itens = new ArrayList<>();
+    }
+
+    public void adicionarItem(Item item) {
+        itens.add(item);
+    }
+
+    public Item encontrarItem(String nome) throws Exception {
+        for (Item item : itens) {
+            if (item.getNome().equals(nome)) {
+                return item;
+            }
+        }
+        throw new Exception("Item não encontrado no inventário");
+    }
+}
