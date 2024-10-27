@@ -1,0 +1,22 @@
+// Arqueiro Celestial - Usa ataques à distância e paralisa inimigos
+class ArqueiroCelestial extends Entidade implements HabilidadeEspecial {
+    public ArqueiroCelestial(String nome, int pontosVida, int ataqueBase) {
+        super(nome, pontosVida, ataqueBase);
+    }
+
+    @Override
+    public void atacar(Entidade alvo) {
+        System.out.println(getNome() + " dispara uma flecha de luz em " + alvo.getNome());
+        int dano = getAtaqueBase();
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+
+    @Override
+    public void usarHabilidadeEspecial(Entidade alvo) {
+        System.out.println(getNome() + " usa uma flecha paralisante!");
+        int dano = getAtaqueBase() + 3;
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+}
