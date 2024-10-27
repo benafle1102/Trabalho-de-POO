@@ -1,0 +1,6 @@
+  // Método para exibir o menu de boas-vindas
+    public static void exibirMenuBoasVindas() {
+        System.out.println("Bem-vindo ao Jogo RPG!");
+        System.out.println("Escolha seus personagens e prepare-se para a batalha!");
+    }
+}
