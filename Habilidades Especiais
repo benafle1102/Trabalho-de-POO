@@ -1,3 +1,0 @@
-// Interface HabilidadeEspecial para definir habilidades especiais
-interface HabilidadeEspecial {
-    void usarHabilidadeEspecial(Entidade alvo);
