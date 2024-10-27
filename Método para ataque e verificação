@@ -1,0 +1,6 @@
+ // Método abstrato para ataque
+    public abstract void atacar(Entidade alvo);
+
+    // Verificar se a entidade está viva
+    public boolean estaViva() {
+        return pontosVida > 0;
