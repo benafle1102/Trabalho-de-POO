@@ -1,0 +1,18 @@
+ // Simulação de combate entre os personagens
+        try {
+            lunaris.atacar(malakar);
+            nivara.usarHabilidadeEspecial(malakar);
+            ragnor.ataqueSombrio(malakar);
+            theron.usarHabilidadeEspecial(malakar);
+            
+            if (!malakar.estaViva()) {
+                System.out.println(malakar.getNome() + " foi derrotado!");
+            } else {
+                malakar.invocarCriaturaSombria();
+                malakar.atacar(lunaris);
+            }
+        } catch (Exception e) {
+            System.out.println("Erro durante o combate: " + e.getMessage());
+        }
+    }
+}
