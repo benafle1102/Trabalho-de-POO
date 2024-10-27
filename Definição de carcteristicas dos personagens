@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+// Classe abstrata Entidade - Define as características dos personagens no jogo
+abstract class Entidade {
+    private String nome;
+    private int pontosVida;
+    private int ataqueBase;
+
+    public Entidade(String nome, int pontosVida, int ataqueBase) {
+        this.nome = nome;
+        this.pontosVida = pontosVida;
+        this.ataqueBase = ataqueBase;
+    }
