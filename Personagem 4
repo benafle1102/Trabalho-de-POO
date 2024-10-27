@@ -1,0 +1,18 @@
+// Mago Sombrio - Vilão com habilidades sombrias poderosas
+class MagoSombrio extends Entidade {
+    public MagoSombrio(String nome, int pontosVida, int ataqueBase) {
+        super(nome, pontosVida, ataqueBase);
+    }
+
+    @Override
+    public void atacar(Entidade alvo) {
+        System.out.println(getNome() + " lança uma magia negra em " + alvo.getNome());
+        int dano = getAtaqueBase();
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+
+    public void invocarCriaturaSombria() {
+        System.out.println(getNome() + " invoca uma criatura sombria para lutar ao seu lado!");
+    }
+}
