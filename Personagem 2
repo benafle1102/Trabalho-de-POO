@@ -1,0 +1,21 @@
+// Guerreiro das Sombras - Usa habilidades sombrias
+class GuerreiroSombras extends Entidade {
+    public GuerreiroSombras(String nome, int pontosVida, int ataqueBase) {
+        super(nome, pontosVida, ataqueBase);
+    }
+
+    @Override
+    public void atacar(Entidade alvo) {
+        System.out.println(getNome() + " ataca com uma lâmina sombria " + alvo.getNome());
+        int dano = getAtaqueBase();
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+
+    public void ataqueSombrio(Entidade alvo) {
+        System.out.println(getNome() + " usa um ataque sombrio!");
+        int dano = getAtaqueBase() + 5;
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+}
