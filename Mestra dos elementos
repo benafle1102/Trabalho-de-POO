@@ -1,0 +1,22 @@
+// Mestra dos Elementos - Pode invocar fogo, gelo e trovão
+class MestraElementos extends Entidade implements HabilidadeEspecial {
+    public MestraElementos(String nome, int pontosVida, int ataqueBase) {
+        super(nome, pontosVida, ataqueBase);
+    }
+
+    @Override
+    public void atacar(Entidade alvo) {
+        System.out.println(getNome() + " invoca uma rajada elemental em " + alvo.getNome());
+        int dano = getAtaqueBase();
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+
+    @Override
+    public void usarHabilidadeEspecial(Entidade alvo) {
+        System.out.println(getNome() + " lança um ataque de Fogo!");
+        int dano = getAtaqueBase() * 2;
+        alvo.setPontosVida(alvo.getPontosVida() - dano);
+        System.out.println(alvo.getNome() + " recebeu " + dano + " de dano! Vida restante: " + alvo.getPontosVida());
+    }
+}
