@@ -1,5 +1,0 @@
- // Encapsulamento
-    public String getNome() { return nome; }
-    public int getPontosVida() { return pontosVida; }
-    public void setPontosVida(int pontosVida) { this.pontosVida = pontosVida; }
-    public int getAtaqueBase() { return ataqueBase; }
